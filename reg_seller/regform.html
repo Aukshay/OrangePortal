@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register your Service</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      <link rel="stylesheet" type="text/css" href="regformcss.css">
+  </head>
+  <body id="body">
+    <header id="home">
+      <nav class="transparent">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">
+              <img src="../images/fire.png" style="height: 50px; width: 50px; margin-top: 5px;">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about_us/aboutus.html">About Us</a></li>
+              <li><a href="../contact_us/contactus.html">Contact</a></li>
+              <li><a href="../feedback/feedback.html">Feedback</a></li>
+            </ul>
+            <h5 class="left"><b>ORANGE</b> PORTAL</h5>
+          </div>
+        </div>
+
+  		</nav>
+
+
+
+  		<!-- Sidebar -->
+  		<ul class="sidenav" id="mobile-demo">
+  			<li><a href="../index.html">Home</a></li>
+  			<li><a href="../about_us/aboutus.html">About Us</a></li>
+  			<li><a href="../contact_us/contactus.html">Contact</a></li>
+  		</ul>
+  		<!--Welcome-->
+  		<div class="welcome-text valign-wrapper">
+  			<div class="black-text center-align welcome">
+  				<h3>JOIN <b>ORANGE PORTAL</b></h3>
+  				<h5 class="white-text text-darken-5">Make your service go faster and reach loads of people</h5>
+
+  			</div>
+  		</div>
+  	</header>
+
+      <!-- Modal -->
+      <div id="modal1" class="modal">
+        <div class="modal-content center">
+          <h4>Sign Up</h4>
+          <p>Register to Orange Portal</p>
+          <div class="row">
+
+          <div class="col s6 m6">
+
+          <div class="row">
+              <div class="col s6 m6">
+                <div class="input-field">
+                  <input id="first_name" type="text">
+                  <label for="first_name">First Name</label>
+                </div>
+              </div>
+              <div class="col s6 m6">
+                <div class="input-field">
+                  <input id="last_name" type="text">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+          </div>
+
+          <div class="input-field">
+            <input  id="emailmodal" type="text" class="validate">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <input  id="passmodal" type="password" class="validate">
+            <label for="pass">Password</label>
+          </div>
+          </div>
+          <div class="col s6 m6 center">
+            <img src="../images/register.png" alt="signuplogo" height="60%" width="60%">
+          </div>
+        </div>
+        </div>
+
+        <div class="modal-footer center">
+          <button id="signup" class="btn modal-close #795548 brown" style="width: 100px; margin-right: 20px;">REGISTER</button>
+        </div>
+      </div>
+
+
+
+    <!-- Overlay -->
+    <div id="overlay">
+      <div id="logincard" class="container animated fadeIn">
+      <div class="card #ffe0b2 orange lighten-4">
+         <div class="card-content white-text">
+           <img src="../images/fire.png" alt="fire" height="12%" width="12%" style="margin-left: 180px;">
+           <span class="card-title center brown-text">LOGIN</span>
+           <div class="input-field">
+           <input  id="email" type="text" class="validate">
+           <label for="email">Email</label>
+         </div>
+         <div class="input-field">
+         <input  id="pass" type="password" class="validate">
+         <label for="pass">Password</label>
+       </div>
+     </div>
+         <div class="card-action center ">
+           <button id="loginbtn" class="waves-effect waves-light btn #795548 brown"type="button" name="button" style="width: 100px; margin-right:20px;">LOGIN</button>
+           <button id="signupbtn" data-target="modal1" class="btn modal-trigger #795548 brown" style="width: 100px;">REGISTER</button>
+         </div>
+       </div>
+       </div>
+    </div>
+
+
+
+
+
+
+    <div id="greet" >
+      <div class="container">
+        <div class="row">
+          <div class="col s8">
+            <h4 id="wel" class="white-text"></h4>
+          </div>
+          <div class="col s4 center">
+            <a class="waves-effect waves-light btn" style="margin: 30px;" onclick="logout()"><i class="material-icons right">arrow_forward</i>Log out</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+
+      <h1>Register your Service</h1>
+      <p>Be a part of Orange Portal</p>
+
+
+      <div  class="container" style="background-color: #fff2fb; padding: 20px;  border: 2px solid pink; border-radius: 25px;">
+        <div class="row">
+       <div class="input-field col s6">
+         <input id="first_name" type="text">
+         <label for="first_name">First Name</label>
+       </div>
+       <div class="input-field col s6">
+         <input id="last_name" type="text">
+         <label for="last_name">Last Name</label>
+       </div>
+     </div>
+     <div class="input-field col s6">
+       <input id="s_name" type="text">
+       <label for="s_name">Shop Name</label>
+     </div>
+     <div class="input-field col s6">
+       <input id="s_add" type="text" >
+       <label for="s_add">Shop Address</label>
+     </div>
+     <div class="input-field col s6">
+       <input id="cont_no" type="text">
+       <label for="cont_no">Contact Number</label>
+     </div>
+     <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Image</span>
+        <input type="file" id="filebutton">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+      <div  class="progress">
+        <div id="uploader" class="determinate"></div>
+    </div>
+    </div>
+  </form>
+     <div class="input-field col s12">
+    <select id="selector">
+      <option value="0" disabled selected>Choose your option</option>
+      <option value="1">Tent Service</option>
+      <option value="2">Water Supply</option>
+      <option value="3">Catering</option>
+      <option value="4">Music</option>
+      <option value="5">Printing</option>
+      <option value="6">Decoration</option>
+
+    </select>
+    <label>Service Category</label>
+  </div>
+     <a id="submitButton" class="waves-effect waves-light btn" style="display: none;" onclick="show()">Submit</a>
+      </div>
+
+      <div class="center">
+        <a id="go" class="waves-effect waves-light btn" style="padding-right:40px;padding-left:40px;" onclick="redirect()">Home</a>
+      </div>
+
+
+
+    </div>
+
+    <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">ORANGE PORTAL</h5>
+                  <p class="grey-text text-lighten-4">Building No.378, Ganesh Chowki, Ajmer, Rajasthan (305001)
+  								(+91) 987898764</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="reg_seller/regform.html">Regesiter as Seller</a></li>
+                    <li><a class="grey-text text-lighten-3" href="feedback/feedback.html">Feedback</a></li>
+                    <li><i class="material-icons">email</i><a class="grey-text text-lighten-3" href="#!">orangeportal@gmail.com</a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2019 Orange Portal
+              </div>
+            </div>
+          </footer>
+
+    <script
+   src="https://code.jquery.com/jquery-3.3.1.js"
+   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+     });
+
+      // Or with jQuery
+
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+      // modal init
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+     <script type="text/javascript" src="regform.js"></script>
+  </body>
+</html>

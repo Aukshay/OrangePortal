@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+
+	<!-- Compiled and minified CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Compiled and minified JavaScript -->
+</head>
+
+<body>
+	<header id="home">
+		<nav class="transparent">
+			<div class="container">
+				<div class="nav-wrapper">
+
+					<a href="#" class="brand-logo center">
+						<img src="images/fire.png" style="height: 50px; width: 50px; margin-top: 5px;">
+					</a>
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about_us/aboutus.html">About Us</a></li>
+						<li><a href="contact_us/contactus.html">Contact</a></li>
+						<li><a href="feedback.html">Feedback</a></li>
+						<li id="acc" style="display:none;"><a data-target="modal2" class="modal-trigger" href="#">Account</a></li>
+						<img id="accpic" src="images/dp.png" alt="smalldp" height=60px; width=60px; style="border: 2px; border-radius: 50%;">
+					</ul>
+
+					<h5 data-aos="fade-in" class="left"><b>ORANGE</b> PORTAL</h5>
+				</div>
+			</div>
+
+		</nav>
+
+		<!-- Sidebar -->
+		<ul class="sidenav" id="mobile-demo">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about_us/aboutus.html">About Us</a></li>
+			<li><a href="contact_us/contactus.html">Contact</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+		</ul>
+		<!--Welcome-->
+		<div class="welcome-text valign-wrapper">
+			<div class="black-text center-align welcome">
+				<h3>A <b>PORTAL</b> FOR EVENT MANAGEMENT</h3>
+				<p class="text-darken-5">Need anything for setting up your upcoming event? Well, we are here for you! </p>
+				<a id="loginbutton" data-target ="modal3" class="waves-effect waves-light btn modal-trigger" style=" display: none; width: 100px;">Login</a>
+				<a id="signupbtn" data-target="modal1" class="waves-effect waves-light btn modal-trigger" style=" display: none; width: 100px; ">Signup</a>
+				<div id="preloader" class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<!-- Modal Structure -->
+	  <div id="modal1" class="modal">
+			<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Personal Info</a></li>
+        <li class="tab col s3"><a href="#test2">Set Password</a></li>
+        <li class="tab col s3"><a href="#test3">Display Picture</a></li>
+				<li class="tab col s3"><a href="#test4">Success</a></li>
+
+      </ul>
+    </div>
+    <div id="test1" class="col s12">
+
+					<div class="col s6 m6">
+						<div class="input-field">
+							<input id="first_name" type="text">
+							<label for="first_name">First Name</label>
+						</div>
+					</div>
+					<div class="col s6 m6">
+						<div class="input-field">
+							<input id="last_name" type="text">
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="input-field">
+							<input id="phno" type="text">
+							<label for="phno">Contact No.</label>
+						</div>
+						<div class="input-field">
+							<input id="email" type="text">
+							<label for="email">Email</label>
+						</div>
+						<div class="center">
+							<a class="waves-effect waves-light btn"  onclick="tab2()">NEXT</a>
+						</div>
+
+					</div>
+
+    </div>
+    <div id="test2" class="col s12 center">
+			<h5 style="margin-top: 20px; margin-bottom: 20px;">Set password for your Orange Portal account</h5>
+
+				<div class="input-field">
+					<input id="pass" type="password">
+					<label for="pass">Enter Password</label>
+				</div>
+
+
+				<div class="input-field" style="margin-bottom: 83px;">
+					<input id="conpass" type="password">
+					<label for="conpass">Confirm Password</label>
+				</div>
+
+				<a class="waves-effect waves-light btn"  onclick="tab3()">NEXT</a>
+    </div>
+    <div id="test3" class="col s12 center">
+			<h5 style="margin-top: 20px; margin-bottom: 20px;">Set display picture for your account</h5>
+			<img id="dp" src="images/dp.png" alt="dp" height="180px;" width="180px;" style="border: 2px;
+		  border-radius: 50%;">
+			<div class="file-field input-field">
+	      <div class="btn center">
+	        <span>Image</span>
+	        <input type="file" id="filebutton">
+	      </div>
+	      <div  class="progress">
+	        <div id="uploader" class="determinate"></div>
+				</div>
+	    </div>
+			<a class="waves-effect waves-light btn" onclick="finish()">Finish</a>
+    </div>
+		<div id="test4" class="col s12 center">
+			<h3 style="margin-top: 100px; margin-bottom: 100px;">Succesfully Registered!</h3>
+			<a class="modal-close waves-effect waves-light btn">Close</a>
+		</div>
+  </div>
+
+	  </div>
+
+		<!-- Account Modal -->
+	<div id="modal2" class="modal" style="padding: 20px">
+		<div class="center">
+			<img id="profpic" src="iamges/dp.png" alt="profilepic" height="200x" width="200px" style="border: 2px; border-radius: 50%;">
+			<h3 id="uname" style="padding: 10px">USERNAME</h3>
+			<h5 id="dispemail" style="padding: 10px">Email</h5>
+			<h6 id="dispcont" style="padding: 10px">contact</h6>
+			<a class="waves-effect waves-light btn modal-close" style="margin: 10px;" onclick="signout()">Logout</a>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div id="modal3" class="modal center" style="padding: 20px">
+		<div class="input-field">
+			<input id="txtemail" type="text">
+			<label for="email">Email</label>
+		</div>
+		<div class="input-field">
+			<input id="txtpass" type="password">
+			<label for="passsword">Password</label>
+		</div>
+		<a id="loginbtn"class="waves-effect waves-light btn modal-close">Login</a>
+	</div>
+
+	<!--about section-->
+	<section id="about" class="valign-wrapper">
+		<div class="container black-text text-lighten-4">
+			<div class="row">
+				<div class="col s12 m9 pull-12">
+					<div class="left-align">
+
+						<h4 style="font-weight: bold;">What is Orange Portal?</h4>
+						<p style=" font-size: 20px;">Orange Portal is a solution to all your event management needs. This website provide a platform to the servicd providers
+						to register their services.<br>
+						So whenever a user wanted to arrange various things for his event then, he will find all sort of services at one place and it is also going to hike the
+					business of the Service providers.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="black center-align valign-wrapper">
+		<div class="container">
+			<div class="col s4"><img src="images/fire.png" style="margin-top: 20px;height: 150px; width: 150px"></div>
+			<div class="col s8">
+				<h2 style="color: white;">THE <b>ORANGE PORTAL</b></h2>
+			</div>
+
+		</div>
+	</section>
+
+	<!--Services-->
+	<section id="services">
+		<div class="section-intro center">
+			<p class="red-text">WHAT CAN WE DO?</p>
+			<h4 style="font-weight: bold;">SERVICES</h4>
+			<p style="margin: 20px">Following are the services which are the basic need for every events. You can find the <b>top rated</b> services on our list!</p>
+		</div>
+		<!--cards-->
+		<div class="cards">
+			<div class="container">
+				<div class="row">
+					<div data-aos="fade-up" class="col s12 m6 l4">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/tent.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4">Tent Service<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Tent Services <i class="material-icons right">close</i></h4>
+								<p>All sort of Tents for all type of occasions!</p>
+								<a class="waves-effect waves-light btn" onclick="tentclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+					<div data-aos="fade-up" class="col s12 m6 l4">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/water.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4">Water Supply<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Water Supply <i class="material-icons right">close</i></h4>
+								<p>Explore water suppliers around you!</p>
+								<a class="waves-effect waves-light btn" onclick="waterclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+					<div data-aos="fade-up" class="col s12 m6 l4">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/catering.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4">Catering<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Catering<i class="material-icons right">close</i></h4>
+								<p>Choose form various Caterers and ready the menu for your event!</p>
+								<a class="waves-effect waves-light btn" onclick="cateringclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+					<div data-aos="fade-up" class="col s12 m6 l4">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/music.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4 ">Music<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Music <i class="material-icons right">close</i></h4>
+								<p>Make your event a special by adding some music to it!</p>
+								<a class="waves-effect waves-light btn" onclick="musicclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+					<div data-aos="fade-up" class="col s12 m6 l4">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/card.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4">Card Printing<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Card Printing <i class="material-icons right">close</i></h4>
+								<p>All sort of Card Printing for all type of occasions!</p>
+								<a class="waves-effect waves-light btn" onclick="printclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+					<div data-aos="fade-up" class="col s12 m6 l4 ">
+						<div class="card small">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="images/decoration.jpg">
+							</div>
+							<div class="card-content">
+								<h4 class="card-title activator grey-text text-darken-4">Decoration<i class="material-icons right">more_vert</i></h4>
+							</div>
+							<div class="card-reveal">
+								<h4 class="card-title grey-text text-darken-4">Decoration <i class="material-icons right">close</i></h4>
+								<p>Find various decoration firms to make your event Decorated</p>
+								<a class="waves-effect waves-light btn" onclick="decoclick()">Explore</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">ORANGE PORTAL</h5>
+                <p class="grey-text text-lighten-4">Building No.378, Ganesh Chowki, Ajmer, Rajasthan (305001)
+								(+91) 987898764</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="reg_seller/regform.html">Regesiter as Seller</a></li>
+                  <li><a class="grey-text text-lighten-3" href="feedback/feedback.html">Feedback</a></li>
+                  <li><i class="material-icons">email</i><a class="grey-text text-lighten-3" href="#!">orangeportal@gmail.com</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Orange Portal
+            </div>
+          </div>
+        </footer>
+
+
+
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init()</script>
+   <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

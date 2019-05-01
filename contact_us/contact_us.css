@@ -1,0 +1,30 @@
+#home{
+	background-color: #f6f7f7;
+	background-image: url(../images/grad.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: backgroud 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	z-index: 2;
+	height: 65vh;
+}
+.welcome-text{
+	width: 80%;
+	margin: 0 10%;
+	height: 90%;
+}
+.welcome-text .welcome{
+	margin:0 auto;
+}
+#about{
+	height: 100vh;
+	background-image: linear-gradient{
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.3), url(images/wall.jpg);
+		background-position: left 15px center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-blend-mode: lighten;
+
+
+}

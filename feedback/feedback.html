@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="fb.css">
+  </head>
+  <body>
+    <header id="home">
+      <nav class="transparent">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">
+              <img src="../images/fire.png" style="height: 50px; width: 50px; margin-top: 5px;">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about_us/aboutus.html">About Us</a></li>
+              <li><a href="../contact_us/contactus.html">Contact</a></li>
+              <li class="active"><a href="../feedback/feedback.html">Feedback</a></li>
+            </ul>
+            <h5 class="left"><b>ORANGE</b> PORTAL</h5>
+          </div>
+        </div>
+
+      </nav>
+
+
+
+  		<!-- Sidebar -->
+  		<ul class="sidenav" id="mobile-demo">
+        <li><a href="../index.html">Home</a></li>
+  			<li><a href="../about_us/aboutus.html">About Us</a></li>
+  			<li><a href="../contact_us/contactus.html">Contact</a></li>
+          <li><a href="../feedback.html">Feedback</a></li>
+  		</ul>
+
+      <!--Welcome-->
+  		<div class="welcome-text valign-wrapper">
+  			<div class="black-text center-align welcome">
+  				<h3>YOUR <b>FEEDBACK</b> IS VALUABLE FOR US!</h3>
+  				<h5 class="white-text text-darken-5">Your opinion helps us to give you the best</h5>
+
+  			</div>
+  		</div>
+  	</header>
+
+    <div class="center" style="margin-top: 50px;">
+      <h5>Kindly fillup the following form</h5>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+      <div class="row">
+        <div class="col s6">
+          <div class="input-field">
+            <input id="uname" type="text">
+            <label for="uname">Name</label>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="input-field">
+            <input id="uemail" type="text">
+            <label for="uemail">Email</label>
+          </div>
+        </div>
+
+      </div>
+      <!--Slider-->
+      <div class="row">
+        <div class="col s3">
+          <p>Rate us on a scale of 0 to 5</p>
+        </div>
+      <p class="range-field col s9">
+        <input type="range" id="test5" min="0" max="5" />
+      </p>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea id="fb" class="materialize-textarea"></textarea>
+        <label for="icon_prefix2">Your Thoughts</label>
+      </div>
+      <div class="center">
+        <a id="submitButton" class="waves-effect waves-light btn" style="padding-right:40px;padding-left:40px;" onclick="submit()">Submit</a>
+      </div>
+
+
+
+      <div style="margin-bottom: 800px;">
+
+      </div>
+    </div>
+
+    <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text"><b>ORANGE</b> PORTAL</h5>
+                  <p class="grey-text text-lighten-4">Building No.378, Ganesh Chowki, Ajmer, Rajasthan (305001)
+  								(+91) 987898764</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="reg_seller/regform.html">Regesiter as Seller</a></li>
+                    <li><a class="grey-text text-lighten-3" href="feedback/feedback.html">Feedback</a></li>
+                    <li><i class="material-icons">email</i><a class="grey-text text-lighten-3" href="#!">orangeportal@gmail.com</a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2019 Orange Portal
+              </div>
+            </div>
+      </footer>
+
+
+
+    <script
+   src="https://code.jquery.com/jquery-3.3.1.js"
+   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+     });
+
+      // Or with jQuery
+
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+      // modal init
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+     <script type="text/javascript" src="feedback.js"></script>
+
+  </body>
+</html>
